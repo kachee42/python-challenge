@@ -27,16 +27,22 @@ with open(election_csv) as csvfile:
     num_total_votes = len(election_data)
 
     # Create an empty dictionary to hold the number of candidates and vote tallies
+    candidates = {}
 
-    # Iterate through all of the election data
+    # Iterate through each vote in the election data
+    for votes in election_data:
 
         # set candidate name equal to the value in column 3
+        candidate_name = votes[2]
 
         # Conditional to check if the candidate name on the current line is not in the dictionary
+        if candidate_name not in candidates.keys():
 
             # If candidate is not in the dictionary add them and set the vote tally to 0, this vote will tick up each time this candidate appears
+            candidates[candidate_name] = 0
 
         # Add one to the vote tally in the dictionary definition for the candidate
+        candidates[candidate_name] += 1
 
     # Create a winning votes variable and set it to 0, this will change to
 
