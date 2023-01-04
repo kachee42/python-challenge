@@ -51,10 +51,10 @@ with open(budget_csv) as csvfile:
     total_change = 0
 
     # Iterate through the list one fewer time than num_months
-    for row_index in range(num_months-1):
+    for row_index in range(num_months - 1):
 
         # create a variable to calculate the change in profit from the next row in the iteration to the current row
-        profit_change = int(profit_data[row_index+1][1]) - int(profit_data[row_index][1])
+        profit_change = int(profit_data[row_index + 1][1]) - int(profit_data[row_index][1])
 
         # Create a conditional to check to see if the current change in profit is greater than the maximum increase
         if profit_change > max_increase:
