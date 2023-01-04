@@ -85,8 +85,12 @@ with open(election_csv) as csvfile:
     with open(output_path, 'w') as textfile:
 
         # write Title line and underline
+        textfile.write('Election Results\n\n')
+        textfile.write('--------------------------\n\n')
 
         # write total votes line and underline
+        textfile.write('Total Votes: %d\n\n' % num_total_votes)
+        textfile.write('--------------------------\n\n')
 
         # Iterate through each candidate in dictionary
 
