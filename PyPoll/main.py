@@ -59,14 +59,19 @@ with open(election_csv) as csvfile:
     print('--------------------------')
 
     # Iterate through each candidate in the dictionary
+    for candidate_name in candidates:
 
         # Conditional to check if the votes for each candidate is greater than the winning votes variable
+        if candidates[candidate_name] > winning_votes:
 
             # if yes, set the winning votes equal to the candidate's definition number of votes
+            winning_votes = candidates[candidate_name]
 
             # if yes, set the winner variable equal to the candidate
+            winner = candidate_name
 
-        # Print each candidate name, the percentage of votes won (calculated here), and the dictionary definition number of votes for that candidate
+        # Print each candidate name, the percentage of votes won (calculated here), and number of votes
+        print('%s: %.3f%% (%d)' % (candidate_name, float(candidates[candidate_name]) / float(num_total_votes) * 100, candidates[candidate_name]))
 
         # Print underline, winner name and last underline
 
