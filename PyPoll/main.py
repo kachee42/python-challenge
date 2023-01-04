@@ -73,7 +73,10 @@ with open(election_csv) as csvfile:
         # Print each candidate name, the percentage of votes won (calculated here), and number of votes
         print('%s: %.3f%% (%d)' % (candidate_name, float(candidates[candidate_name]) / float(num_total_votes) * 100, candidates[candidate_name]))
 
-        # Print underline, winner name and last underline
+    # Print underline, winner name and last underline
+    print('--------------------------')
+    print('Winner: %s' % winner)
+    print('--------------------------')
 
     # Create output path and analysis file name
 
