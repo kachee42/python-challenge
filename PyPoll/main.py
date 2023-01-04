@@ -93,13 +93,18 @@ with open(election_csv) as csvfile:
         textfile.write('--------------------------\n\n')
 
         # Iterate through each candidate in dictionary
+        for candidate_name in candidates:
 
             # Conditional to check if currently looked at candidate's votes are greater than the winning votes variable
+            if candidates[candidate_name] > winning_votes:
 
                 # If yes, change the winning votes variable to candidate votes
+                winning_votes = candidates[candidate_name]
 
                 # if yes, change the winner variable to the current candidate
+                winner = candidate_name
 
             # for each candidate write the candidate name, calculated percent votes wone, and the number of votes won
+            textfile.write('%s: %.3f%% (%d)\n\n' % (candidate_name, float(candidates[candidate_name]) / float(num_total_votes) * 100, candidates[candidate_name]))
 
         # write underline, winner name, and final underline
