@@ -108,3 +108,6 @@ with open(election_csv) as csvfile:
             textfile.write('%s: %.3f%% (%d)\n\n' % (candidate_name, float(candidates[candidate_name]) / float(num_total_votes) * 100, candidates[candidate_name]))
 
         # write underline, winner name, and final underline
+        textfile.write('--------------------------\n\n')
+        textfile.write('Winner: %s\n\n' % winner)
+        textfile.write('--------------------------')
