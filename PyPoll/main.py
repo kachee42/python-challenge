@@ -79,8 +79,10 @@ with open(election_csv) as csvfile:
     print('--------------------------')
 
     # Create output path and analysis file name
+    output_path = os.path.join('analysis', "Analysis.txt")
 
     # Open and create textfile
+    with open(output_path, 'w') as textfile:
 
         # write Title line and underline
 
