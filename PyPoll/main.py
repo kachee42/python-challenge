@@ -3,16 +3,22 @@
 # These data are printed to the command line and exported to a text file
 
 # Import operating system Module
+import os
 
 # Import CSV module
+import csv
 
 # Create variable that contains the file path of the CSV
+election_csv = os.path.join('resources', 'election_data.csv')
 
 # Open the CSV for analysis
+with open(election_csv) as csvfile:
 
     # run CSV reader, specify the delimiter and place the data into a variable
+    csvreader = csv.reader(csvfile, delimiter=',')
 
     # Skip Header
+    header = next(csvreader)
 
     # Place data into list for easier analysis
 
