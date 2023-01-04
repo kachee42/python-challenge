@@ -21,8 +21,10 @@ with open(election_csv) as csvfile:
     header = next(csvreader)
 
     # Place data into list for easier analysis
+    election_data = list(csvreader)
 
     # Count total number of votes
+    num_total_votes = len(election_data)
 
     # Create an empty dictionary to hold the number of candidates and vote tallies
 
