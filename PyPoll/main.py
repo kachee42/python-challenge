@@ -51,8 +51,12 @@ with open(election_csv) as csvfile:
     winner = ' '
 
     # Print Election results and underline lines
+    print('Election Results')
+    print('--------------------------')
 
     # print the total votes and next underline lines
+    print('Total Votes: %d' % num_total_votes)
+    print('--------------------------')
 
     # Iterate through each candidate in the dictionary
 
