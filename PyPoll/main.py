@@ -1,0 +1,71 @@
+# This script looks through the voting data for multiple counties and tallies the number of votes for each candidate
+# Tallies are then used to determine win percentages and a final winner
+# These data are printed to the command line and exported to a text file
+
+# Import operating system Module
+
+# Import CSV module
+
+# Create variable that contains the file path of the CSV
+
+# Open the CSV for analysis
+
+    # run CSV reader, specify the delimiter and place the data into a variable
+
+    # Skip Header
+
+    # Place data into list for easier analysis
+
+    # Count total number of votes
+
+    # Create an empty dictionary to hold the number of candidates and vote tallies
+
+    # Iterate through all of the election data
+
+        # set candidate name equal to the value in column 3
+
+        # Conditional to check if the candidate name on the current line is not in the dictionary
+
+            # If candidate is not in the dictionary add them and set the vote tally to 0, this vote will tick up each time this candidate appears
+
+        # Add one to the vote tally in the dictionary definition for the candidate
+
+    # Create a winning votes variable and set it to 0, this will change to
+
+    # Create a winner variable and set it to ' ', this will be changed to the candidate with the most votes later
+
+    # Print Election results and underline lines
+
+    # print the total votes and next underline lines
+
+    # Iterate through each candidate in the dictionary
+
+        # Conditional to check if the votes for each candidate is greater than the winning votes variable
+
+            # if yes, set the winning votes equal to the candidate's definition number of votes
+
+            # if yes, set the winner variable equal to the candidate
+
+        # Print each candidate name, the percentage of votes won (calculated here), and the dictionary definition number of votes for that candidate
+
+        # Print underline, winner name and last underline
+
+    # Create output path and analysis file name
+
+    # Open and create textfile
+
+        # write Title line and underline
+
+        # write total votes line and underline
+
+        # Iterate through each candidate in dictionary
+
+            # Conditional to check if currently looked at candidate's votes are greater than the winning votes variable
+
+                # If yes, change the winning votes variable to candidate votes
+
+                # if yes, change the winner variable to the current candidate
+
+            # for each candidate write the candidate name, calculated percent votes wone, and the number of votes won
+
+        # write underline, winner name, and final underline
