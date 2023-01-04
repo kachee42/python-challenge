@@ -44,9 +44,11 @@ with open(election_csv) as csvfile:
         # Add one to the vote tally in the dictionary definition for the candidate
         candidates[candidate_name] += 1
 
-    # Create a winning votes variable and set it to 0, this will change to
+    # Create a winning votes variable and set it to 0, this will change to the largest number of votes later
+    winning_votes = 0
 
     # Create a winner variable and set it to ' ', this will be changed to the candidate with the most votes later
+    winner = ' '
 
     # Print Election results and underline lines
 
